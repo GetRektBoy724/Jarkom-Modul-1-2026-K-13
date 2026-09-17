@@ -220,11 +220,11 @@ dns || icmp
 
 Hasil capture sebelum filter menunjukkan traffic campuran yang dihasilkan generator, termasuk protokol lain di luar DNS dan ICMP:
 
-![alt text](A07AB2FF-E0B1-42EB-BAA6-C40D9C9DF312_1_105_c.jpeg)
+![alt text](assets/A07AB2FF-E0B1-42EB-BAA6-C40D9C9DF312_1_105_c.jpeg)
 
 Setelah display filter `dns || icmp` diterapkan, hanya paket berprotokol DNS dan ICMP yang tersisa di packet list:
 
-![alt text](B0A7E188-9F5F-488C-9350-487D58114017_1_105_c.jpeg)
+![alt text](assets/B0A7E188-9F5F-488C-9350-487D58114017_1_105_c.jpeg)
 
 Ringkasan paket yang lolos filter:
 
@@ -303,7 +303,7 @@ ftp> put signal_alice.txt
 ```
 Upload berhasil dengan respons `226 Transfer complete`:
 
-![alt text](792C2CEB-191E-41C7-B6BE-909CEF00FDB0_4_5005_c.jpeg)
+![alt text](assets/792C2CEB-191E-41C7-B6BE-909CEF00FDB0_4_5005_c.jpeg)
 
 Percobaan login sebagai eiri ditolak karena masuk userlist blacklist:
 ```bash
@@ -312,7 +312,7 @@ ftp <IP_Chisa>
 ```
 Server menolak koneksi sebelum tahap password dengan respons `530 Permission denied`:
 
-![alt text](C00EF1C7-48AC-4B6C-8992-13248668AF46_1_105_c-1.jpeg)
+![alt text](assets/C00EF1C7-48AC-4B6C-8992-13248668AF46_1_105_c-1.jpeg)
  
 ## Soal 8
 > Kelompok rahasia Knights perlu mengirimkan dokumen laporan intelijen ke FTP Server Chisa. Lakukan koneksi FTP client dari node Knights ke FTP Server Chisa menggunakan akun alice. Upload file berikut (link file). Analisis sesi Wireshark dan sebutkan: perintah FTP untuk upload (STOR), kode status sukses server (226), dan port data TCP yang dinegosiasikan pada mode PASV.
@@ -338,7 +338,7 @@ Packet capture dijalankan bersamaan di Wireshark pada interface node Chisa (atau
 
 Sesi FTP di Wireshark menunjukkan urutan berikut pada control channel (port 21):
 
-![alt text](79D24985-BC76-4650-AA79-A6094926A168_1_105_c.jpeg)
+![alt text](assets/79D24985-BC76-4650-AA79-A6094926A168_1_105_c.jpeg)
 
 Rincian temuan:
 
@@ -348,7 +348,7 @@ Rincian temuan:
 
 Data channel pada port hasil negosiasi tersebut menunjukkan transfer file yang sebenarnya, terpisah dari control channel:
 
-![alt text](79D24985-BC76-4650-AA79-A6094926A168_1_105_c-1.jpeg)
+![alt text](assets/79D24985-BC76-4650-AA79-A6094926A168_1_105_c-1.jpeg)
 
 ## Soal 9
 
@@ -403,14 +403,14 @@ Output ringkasan `ping` di terminal Knights menunjukkan statistik packet loss da
 77 packets transmitted, 77 received, 0% packet loss, time 22834ms
 rtt min/avg/max/mdev = 0.412/0.897/2.103/0.311 ms
 ```
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
 
 Capture Wireshark dengan filter `icmp` menunjukkan pasangan Echo Request dan Echo Reply untuk setiap paket:
 
-![alt text](image-4.png)
-![alt text](image-3.png)
-![alt text](image-2.png)
-![alt text](image-1.png)
+![alt text](assets/image-4.png)
+![alt text](assets/image-3.png)
+![alt text](assets/image-2.png)
+![alt text](assets/image-1.png)
 
 Rincian temuan:
 
@@ -509,9 +509,9 @@ Connection to <10.4.89.246> 80 port [tcp/http] succeeded!
 nc: connect to <10.4.89.246> port 7777 (tcp) failed: Connection refused
 ```
 
-![alt text](B2FB8740-5255-4AC1-9089-2E706CAC9DF0.png)
-![alt text](8A21B59D-CF45-4D29-800F-33E18D78A5F5.png)
-![alt text](9A6C3F47-6591-4C11-85E8-960D2414446D.png)
+![alt text](assets/B2FB8740-5255-4AC1-9089-2E706CAC9DF0.png)
+![alt text](assets/8A21B59D-CF45-4D29-800F-33E18D78A5F5.png)
+![alt text](assets/9A6C3F47-6591-4C11-85E8-960D2414446D.png)
 
 
 Rincian temuan:
@@ -574,11 +574,11 @@ Login dari Mika ke Knights menggunakan key tanpa diminta password:
 ssh mika_admin@<10.4.89.246>
 ```
 
-![alt text](AEB1A49A-414A-4A88-B6F6-03A6725C3224.png)
+![alt text](assets/AEB1A49A-414A-4A88-B6F6-03A6725C3224.png)
 
 Capture Wireshark dengan filter `tcp.port==22` menunjukkan urutan awal sesi SSH:
 
-![alt text](0555FE32-2119-4DDA-B6AB-D694F13119F2.png)
+![alt text](assets/0555FE32-2119-4DDA-B6AB-D694F13119F2.png)
 
 Rincian temuan:
 
