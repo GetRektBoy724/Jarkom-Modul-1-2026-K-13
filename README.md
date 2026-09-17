@@ -115,6 +115,10 @@ pasangan lintas subnet) berhasil:
 
 ![cross-client ping test](assets/soal3-pingtest.png)
 
+Kami juga mencoba untuk menjalankan ping terhadap ketiga subnet dari node Alice.
+
+![ping across subnets](assets/soal3-pingacrosssubnets.png)
+
 ## Soal 4
 
 > Lain ingin agar setiap Entitas (Client) memiliki kemandirian di The Wired. Konfigurasikan firewall/iptables (NAT Masquerade) dan DNS resolver agar setiap Client dapat terhubung ke internet secara mandiri (dapat melakukan ping ke 8.8.8.8 dan membuka domain web google.com).
